@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class HexToBinary {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input hexadecimal number
+        System.out.print("Enter a hexadecimal number: ");
+        String hex = sc.nextLine();
+
+        try {
+            // Convert hex to decimal
+            int decimal = Integer.parseInt(hex, 16);
+
+            // Convert decimal to binary
+            String binary = Integer.toBinaryString(decimal);
+
+            // Output
+            System.out.println("Binary equivalent: " + binary);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid hexadecimal input!");
+        }
+    }
+}
